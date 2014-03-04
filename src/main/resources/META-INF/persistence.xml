@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+  <persistence-unit name="com.mediasoft_media-trans_war_1.0-SNAPSHOTPU" transaction-type="JTA">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <jta-data-source>jdbc/media_log</jta-data-source>
+    <class>com.mediasoft.media.trans.entites.Marque</class>
+    <class>com.mediasoft.media.trans.entites.Piece</class>
+    <class>com.mediasoft.media.trans.entites.Typepiece</class>
+    <class>com.mediasoft.media.trans.entites.Typevehicule</class>
+    <class>com.mediasoft.media.trans.entites.Vehicule</class>
+    <class>com.mediasoft.media.trans.entites.Document</class>
+    <class>com.mediasoft.media.trans.entites.Typedocument</class>
+    <class>com.mediasoft.media.trans.entites.Typevehiculetypepiece</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="eclipselink.ddl-generation" value="create-tables"/>
+    </properties>
+  </persistence-unit>
+</persistence>

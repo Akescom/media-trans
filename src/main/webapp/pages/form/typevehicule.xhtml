@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./../../templates/template.xhtml"
+                xmlns:p="http://primefaces.org/ui">
+
+    <ui:define name="contenu">
+        <p:fieldset legend="#{msg['index.fieldset.typevehicule']}" styleClass="fieldset" style="text-align: left">
+            <ui:include  src="/pages/list/listetypevehicule.xhtml"/>
+        </p:fieldset>
+        <p:dialog header="Enregistrer un nouveau de type de vehicule" showEffect="fade" hideEffect="fade" widgetVar="typevehicule" styleClass="dlg" resizable="false">
+            <ui:include src="/pages/dialog/newtypevehicule.xhtml"/>
+        </p:dialog>
+        <p:dialog id="seltypevehicule" header="Modifier un nouveau de type de Vehicule" showEffect="fade" hideEffect="fade" widgetVar="uptypevehicule" styleClass="dlg" resizable="false">
+            <ui:include src="/pages/dialog/update/updatetypevehicule.xhtml"/>
+        </p:dialog>
+    </ui:define>
+
+</ui:composition>

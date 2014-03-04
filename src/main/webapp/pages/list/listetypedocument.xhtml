@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+
+
+    <h:form>
+        <p:dataTable value="#{typeDocumentBean.typedocuments}" var="item"   selection="#{typeDocumentBean.selTypedocument}" selectionMode="single" rowKey="#{item.idTypeDoc}" >
+            <p:ajax  event="rowSelect" listener="#{typeDocumentBean.active()}" update="mod sup"/>
+            <p:column filterBy="#{item.libelleTypeDoc}">
+                <f:facet name="header">
+                    <h:outputText value="Libelle"/>
+                </f:facet>
+                <h:outputText value="#{item.libelleTypeDoc}"/>
+            </p:column>
+            <f:facet name="footer">
+                <p:commandButton id="mod" update=":seltypedoc" value="#{msg['index.btnmodifier']}" oncomplete="uptypedoc.show();" disabled="#{typeDocumentBean.activer}" styleClass="button"/> 
+                <p:commandButton id="sup"  value="#{msg['index.btnsupprimer']}" disabled="#{typeDocumentBean.activer}"  styleClass="button" onclick="confirmation.show();"/>
+                <p:commandButton value="#{msg['index.btnajouter']}" icon="ui-icon-ajouter" styleClass="button" oncomplete="typedoc.show();"/>
+            </f:facet>
+        </p:dataTable>
+        
+    </h:form>
+    <h:form>
+        <p:confirmDialog message="voulez -vous vraiment effectué cette opération"  severity="alert" widgetVar="confirmation">
+            <p:commandButton  value="Oui" actionListener="#{typeDocumentBean.supprimer()}" ajax="false" icon="ui-icon-ok"  />
+            <p:commandButton value="Non" onclick="uptypedoc.hide();"  ajax="false"/>
+        </p:confirmDialog>
+    </h:form>
+
+</ui:composition>

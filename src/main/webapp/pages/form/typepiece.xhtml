@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                  template="./../../templates/template.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:p="http://primefaces.org/ui">
+   
+    <ui:define name="contenu">
+    <p:fieldset legend="#{msg['index.fieldset.typepiece']}" styleClass="fieldset" style="text-align: left" >
+       <ui:include  src="/pages/list/listetypepiece.xhtml"/>
+    </p:fieldset>
+       <p:dialog header="Enregistrer un nouveau de type pièce" showEffect="fade" hideEffect="fade" widgetVar="typepiece" styleClass="dlg" resizable="false">
+            <ui:include src="/pages/dialog/newtypepiece.xhtml"/>
+        </p:dialog>
+        <p:dialog id="seltypepiece" header="Modifier un nouveau de type piece" showEffect="fade" hideEffect="fade" widgetVar="uptypepiece" styleClass="dlg" resizable="false">
+            <ui:include src="/pages/dialog/update/updatetypepiece.xhtml"/>
+     </p:dialog>
+    </ui:define>
+</ui:composition>

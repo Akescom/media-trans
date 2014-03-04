@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <f:view contentType="text/html"  locale="#{changeLocaleBean.locale}" >
+        <h:head >
+            <f:facet name="first" >
+                <title>Media-Trans</title>
+                <link rel="shortcut icon" href="./resources/images/silk/house.png" type="image/x-icon"/>
+                <h:outputStylesheet library="css" name="style.css"/>
+            </f:facet>
+        </h:head>
+        <h:body>
+
+            <div id="main">
+                <div id="header">
+                    <div id="widgetBar">
+
+                        <div class="headerWidget">
+                            <h:form enctype="multipart/form-data" prependId="false">
+                                <p:toolbar>  
+                                    <p:toolbarGroup align="left" style="font-size: 8px;">  
+                                        <p:commandButton value="#{msg['index.langue.fr']}"  action="#{changeLocaleBean.setFrenchLocale()}"  title="#{msg['index.langue.fr']}"  icon="ui-icon-flag-fr" update="@all" />
+                                        <p:separator/> 
+                                        <p:commandButton    value="#{msg['index.langue.en']}"   action="#{changeLocaleBean.setEnglishLocale()}"  title="#{msg['index.langue.en']}" icon="ui-icon-flag-en" update="@all" />
+                                       </p:toolbarGroup>  
+                                </p:toolbar>  
+                            </h:form>
+                        </div>
+
+                        <div class="headerWidget">
+                            <p:clock pattern="HH:mm:ss dd.MM.yyyy"  />
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="hautmenu" >
+
+                    <div id="menu" class="menubar ">
+                        <h:form>
+                          
+                            <p:menuButton  value="Reservation">
+                                <p:menuitem  value="reserver" styleClass="label"/>
+                            </p:menuButton>
+                            <p:menuButton  value="Operations" >
+                                <p:menuitem  value="Vidange" styleClass="label"/>
+                                <p:menuitem  value="Document" styleClass="label"/>
+                                <p:menuitem  value="Evenement" styleClass="label"/>
+                            </p:menuButton>
+
+                        </h:form>
+                    </div> 
+                </div>
+                <div id="indexLeftColumn" class="label">
+
+                    <h:form>
+                        <p:panelMenu>
+                            <p:submenu label="Administration">
+
+                            </p:submenu>
+                            <p:submenu label="Personnel">
+                                <p:menuitem value="Employés"/>
+                                <p:menuitem value=""/>
+                            </p:submenu>
+                            <p:submenu label="Matériels">
+                                <p:menuitem value="Véhicules"/>
+                                <p:menuitem value="Marque"  url="/pages/form/marque.xhtml"/>
+                                <p:menuitem value="Typevéhicule" url="/pages/form/typevehicule.xhtml"/>
+                                <p:separator/>
+                                <p:menuitem value="Pièces"/>
+                                <p:menuitem value="Type pièce" url="/pages/form/typepiece.xhtml"/>
+                            </p:submenu>
+                            <p:submenu label="0perations">
+                                <p:menuitem value="Type Documents" url="/pages/form/typedocument.xhtml"/>
+                            </p:submenu>
+                        </p:panelMenu>
+                    </h:form> 
+                </div>
+
+                <div id="indexRightColumn">
+                    <ui:insert name="contenu">
+
+                    </ui:insert>
+                </div>
+
+                <!--    <div id="footer">
+    
+                    </div> -->
+            </div>
+        </h:body>
+    </f:view>    
+</html>
+

@@ -1,0 +1,336 @@
+
+/* 
+    Document   : style
+    Created on : 15 janv. 2013, 08:15:40
+    Author     : MANU
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+
+body {
+    background:rgba(200,200,255,255); 
+   
+    /*background: #D8E7F4; */
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+#main {
+
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header {
+    height: 150px;
+    width: 100%;
+    border-radius: 10px;
+    backface-visibility: visible;
+
+    background-image: url("#{resource['images:template/h']}") !important;
+}
+
+
+#logo {
+    height: 120px;
+    width: 120px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border-style: outset;
+    background: #aaa;
+    background-image: url("#{resource['images:template/logo.jpeg']}") !important;
+}
+
+#logoText {
+    float: left;
+    margin: 20px 0 0 70px;
+    /* font styles apply to text within alt tags */
+    font-family: 'American Typewriter', Courier, monospace;
+    font-size: 50px;
+    color: #333;
+
+}
+
+#widgetBar {
+    height: 50px;
+    width: 650px;
+    float: right;
+
+}
+
+.headerWidget {
+    width: 194px;
+    margin: 20px 2px;
+    font-size: small;
+    float: right;
+    line-height: 25px;
+    
+}
+
+#footer {
+    height: 40px;
+    clear: left;
+    width:81%;
+    float: right;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    background:#448CCB;
+}
+
+#hautmenu {
+    height: 35px;
+    width:81%;
+    float: right;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #448CCB;
+}
+
+#indexLeftColumn {
+    height: 440px;
+    width: 18%;
+    margin-top: 40px;
+    float: left;
+    border-radius: 20px;
+    background: #BD2E12;
+}
+
+
+
+#indexRightColumn {
+    margin-top: 10px;
+    height: 440px;
+    width:81%;
+    float: right;
+   /* border-radius: 20px; */
+    background: oldlace;
+}
+
+
+#meName{
+    width: 815px;
+    height: 50%;
+    margin-left: 25px;
+    float:left;
+    border-radius: 10px;
+}
+
+#menu{
+    font-size: 14px; 
+    width: 815px;
+    margin-left: 25px;
+    float:right;
+    border-radius: 10px;
+    position: absolute;
+}
+
+#menudecont{
+
+    margin-left:25px;
+    width: 445px;
+    height: 50%;
+    float:left;
+    border-radius: 10px;
+}
+
+.menubar{
+    font-size: 8px;
+    border-radius: 20px;
+}
+.tabmenu{
+    border-radius: 10px;
+    height: 20px;
+    float: right;
+}
+
+.headerWidget {
+    width: 194px;
+    margin: 20px 2px;
+    font-size: small;
+    float: right;
+    line-height: 25px;
+    border-radius: 10px;
+    -webkit-border-radius: 5px;
+}
+.label{
+    font-size: 9px; 
+    font-family: Tahoma, Verdana, Arial, sans-serif !important;
+}
+.button{
+    text-align: center;
+    float: right;
+    font-size: 10px; 
+    font-family: Tahoma, Verdana, Arial, sans-serif !important;   
+}
+
+.labelm{
+    text-align: center;
+    font-size: 10px; 
+    font-family: Tahoma, Verdana, Arial, sans-serif !important;
+}
+
+.lfooter{
+    font-family: Tahoma, Verdana, Arial, sans-serif !important;
+    color: blue;    
+}
+.galleria{
+    width: 230px;
+    height: 340px;
+    position: relative;
+}
+.gallerie{
+    width:100%;
+    height:430px;
+
+
+
+}
+.tabview{
+    font-size: 10px;
+}
+.dlg{
+    font-size: 11px;
+    width: 240px;  
+    border-radius: 10px;
+    border-style: outset;
+}
+
+.input{
+    width: 180px;
+    font-size: 11px;
+}
+
+.datatable{
+    border-style: outset;
+    font-size: 10px;
+    border-radius: 10px;
+    margin-left: 25px;
+
+}
+
+.gallerie{
+    width: 1000px;
+    height:350px;
+
+}
+.ui-icon-morale{
+    background-image: url("#{resource['images:silk/house.png']}") !important;
+}
+
+.ui-icon-physique{
+    background-image: url("#{resource['images:silk/user.png']}") !important;
+}
+
+.ui-icon-flag-fr{
+    background-image: url("#{resource['images:flags/fr.gif']}") !important;
+}
+
+.ui-icon-flag-en{
+    background-image: url("#{resource['images:flags/en.gif']}") !important;
+}
+
+.ui-icon-interne{
+    background-image: url("#{resource['images:icone/start-here.png']}") !important;
+    width: 60px;
+    height: 50px;
+}
+.tab{
+    font-size: 10px;
+}
+.fieldset{
+    font-size: 10px;
+    
+    
+}
+.panelSelect{
+    font-size: 9px;
+    font-family: 'American Typewriter', Courier, monospace;
+}
+
+.panelMenu{
+    font-family: 'American Typewriter', Courier, monospace;
+    font-size: 11px;
+}
+
+.subMenu{
+    font-size: 11px; 
+    font-family: Tahoma, Verdana, Arial, sans-serif !important;
+}
+
+.ui-icon-user{
+    background-image: url("#{resource['images:dark/adminUser.png']}") !important; 
+}
+
+.ui-icon-login{
+    background-image: url("#{resource['images:silk/lock.png']}") !important;
+}
+
+.ui-icon-menu{
+    background-image: url("#{resource['images:silk/menu-show.gif']}") !important;
+}
+
+.ui-icon-menuitem{
+    background-image: url("#{resource['images:dark/computer.png']}") !important;
+}
+
+.ui-icon-ecran{
+    background-image: url("#{resource['images:silk/monitor_add.png']}") !important;
+}
+
+.ui-icon-profilmenuitem{
+    background-image: url("#{resource['images:silk/eye.png']}") !important;
+}
+
+.ui-icon-syslog{
+    background-image: url("#{resource['images:dark/archive.png']}") !important;
+}
+
+.ui-icon-report{
+    background-image: url("#{resource['images:silk/report.png']}") !important;
+}
+
+.ui-icon-printer{
+    background-image: url("#{resource['images:silk/printer.png']}") !important;
+}
+
+.ui-icon-ok{
+    background-image: url("#{resource['images:silk/accept.png']}") !important;
+}
+
+.ui-icon-cand{
+    background-image: url("#{resource['images:icone/meeting.png']}") !important;
+}
+
+.ui-icon-pret{
+    background-image: url("#{resource['images:silk/money_dollar.png']}") !important
+}
+.ui-icon-detailpret{
+    background-image: url("#{resource['images:icone/journal-new.png']}") !important;  
+}
+.ui-icon-ajouter{
+    background-image: url("#{resource['images:silk/add.png']}") !important
+}
+.ui-icon-depot{
+    background-image: url("#{resource['images:silk/database_add.png']}") !important
+}
+
+.ui-icon-retrait{
+    background-image: url("#{resource['images:silk/database_delete.png']}") !important
+}
+.ui-icon-interne{
+    background-image: url("#{resource['images:silk/image.png']}") !important
+}
+
+.ui-icon-accueil{
+    background-image: url("#{resource['images:silk/house_go.png']}") !important
+}

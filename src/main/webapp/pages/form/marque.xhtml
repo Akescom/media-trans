@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./../../templates/template.xhtml"
+                xmlns:p="http://primefaces.org/ui">
+
+    <ui:define name="contenu">
+        <p:fieldset legend="#{msg['index.fieldset.marques']}" styleClass="fieldset" style="text-align: left">
+            <ui:include  src="/pages/list/listemarque.xhtml"/>
+       </p:fieldset>
+        <p:dialog header="Enregistrer une nouvelle marque" showEffect="fade" hideEffect="fade" widgetVar="marque" styleClass="dlg" resizable="false">
+            <ui:include  src="/pages/dialog/newmarque.xhtml" />
+        </p:dialog>
+        <p:dialog id="selmarque" header="Modifier un nouveau de type Documents" showEffect="fade" hideEffect="fade" widgetVar="uptypedoc" styleClass="dlg" resizable="false">
+            <ui:include src="/pages/dialog/update/updatemarque.xhtml"/>
+        </p:dialog>
+    </ui:define>
+
+</ui:composition>

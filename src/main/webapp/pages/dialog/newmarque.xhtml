@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+              
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui">
+    
+    <h:form>
+           <h:panelGrid columns="3">
+               <h:outputLabel value="Libelle Marque" for="libMarque" />
+               <p:inputText id="libMarque" value="#{marqueBean.marque.libMarque}"  required="true" requiredMessage="#{msg['index.fieldrequierd']}"/>
+               <p:commandButton  value="#{msg['index.btnenregistrer']}" action="#{marqueBean.enregistrer()}" ajax="false" icon="ui-icon-ok" />
+      </h:panelGrid>
+        </h:form>
+  
+   
+
+</ui:composition>

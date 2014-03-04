@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://java.sun.com/jsf/html">
+
+
+    <h:form>
+        <h:panelGrid columns="3">
+            <h:outputLabel value="Libelle" for="libelleTypeDoc" />
+            <p:inputText id="libelleTypeDoc" value="#{typeDocumentBean.selTypedocument.libelleTypeDoc}"  />
+            <p:commandButton  value="#{msg['index.btnvalider']}" actionListener="#{typeDocumentBean.modifier()}" ajax="false" icon="ui-icon-ok" />
+        </h:panelGrid>
+     </h:form>
+
+
+</ui:composition>
